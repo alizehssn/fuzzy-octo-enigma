@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Meta Tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Weather Application</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <h1>Weather Dashboard</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>
+                            <i class="fa fa-list-alt"></i> Search City
+                          </strong>
+                    </div>
+                    <!--Search Bar and Past Searches-->
+                    <div class="sidebar">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="search">Search City:</label>
+                                <input type="text" class="form-control" id="searchCity">
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm" id="searchBtn">Search</button>
+                        </form>
+                        <div class="pastSearched">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"></li>
+                                <li class="list-group-item"></li>
+                                <li class="list-group-item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Current Forecast-->
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="currentForecast">
+                        <h1></h1>
+                        <h2></h2>
+                        <p id="date"></p>
+                        <img>
+                        <p id="temperature"></p>
+                        <p id="humidity"></p>
+                        <p id="wind-speed"></p>
+                        <p id="UV"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--5 Day Forecast-->
+        <div class="col-12">
+            <div class="row" id="5dayForecast"></div>
+
+        </div>
+
+    </div>
+
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!--Code to the JaveScript File-->
+    <script src="script.js"></script>
+</body>
+
+</html>
