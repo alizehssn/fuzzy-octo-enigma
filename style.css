@@ -48,6 +48,7 @@ div#day5 {
     border-radius: 25px;
     text-align: center;
     display: inline-block;
+    border: 1px solid blueviolet;
 }
 
 .fiveDayForecast h2 {
