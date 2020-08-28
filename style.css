@@ -1,15 +1,56 @@
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+body {
+    background-image: url("/Users/alizehassan/fuzzy-octo-enigma/img.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-.currentforecast {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
+.jumbotron {
+    border-bottom: 10px;
+    text-align: center;
+    color: blueviolet;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.searchBox {
+    width: 28%;
+}
+
+.searchBox h1 {
+    color: magenta;
+    font-size: 30px;
+}
+
+.pastSearched h3 {
+    font-size: 20px;
+    color: blueviolet
+}
+
+.current-forecast {
+    width: 68%;
+    border: 2px solid violet;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.current-forecast h2 {
+    color: magenta;
+}
+
+div#day1,
+div#day2,
+div#day3,
+div#day4,
+div#day5 {
+    height: 250px;
+    width: 175px;
+    margin: 15px;
+    border-radius: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.fiveDayForecast h2 {
+    text-align: center;
+    color: blueviolet;
 }

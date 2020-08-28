@@ -9,67 +9,59 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--My CSS-->
+    <link rel="stylesheet" href="style.css">
 
     <title>Weather Application</title>
 </head>
 
 <body>
 
+
+    <div class="jumbotron jumbotron-fluid">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <!--Content Container-->
     <div class="container">
-
-        <div class="jumbotron jumbotron-fluid">
-            <h1>Weather Dashboard</h1>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-header">
-                        <strong>
-                            <i class="fa fa-list-alt"></i> Search City
-                          </strong>
-                    </div>
-                    <!--Search Bar and Past Searches-->
-                    <div class="sidebar">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="search">Search City:</label>
-                                <input type="text" class="form-control" id="searchCity">
-                            </div>
-                            <button type="button" class="btn btn-primary btn-sm" id="searchBtn">Search</button>
-                        </form>
-                        <div class="pastSearched">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"></li>
-                                <li class="list-group-item"></li>
-                                <li class="list-group-item"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <!--Search Bar and Past Searches-->
+        <div class="col-2 float-left searchBox">
+            <h1>Search City</h1>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="City" id="searchCity">
+                <button type="button" class="btn btn-primary btn-sm" id="searchBtn">Search</button>
             </div>
-            <!--Current Forecast-->
-            <div class="col-sm-8">
-                <div class="card">
-                    <div class="currentForecast">
-                        <h1></h1>
-                        <h2></h2>
-                        <p id="date"></p>
-                        <img>
-                        <p id="temperature"></p>
-                        <p id="humidity"></p>
-                        <p id="wind-speed"></p>
-                        <p id="UV"></p>
-                    </div>
-                </div>
+            <!--Past Searches Box-->
+            <div class="pastSearched">
+                <h3>Past Searches</h3>
+                <ul class="list-group list-group-flush">
+                </ul>
             </div>
         </div>
+
+
+        <!--Current Forecast Container-->
+
+        <div class="current-forecast float-right">
+            <h2>Current Weather</h2>
+            <h3 id="city"></h3>
+            <p id="date"></p>
+            <img>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+            <p id="UV"></p>
+
+        </div>
+
         <!--5 Day Forecast-->
-        <div class="col-12">
-            <div class="row" id="5dayForecast"></div>
-
+        <div class="fiveDayForecast float-right col-12">
+            <h2>Five Day Forecast </h2>
+            <div id="day1"> </div>
+            <div id="day2"></div>
+            <div id="day3"></div>
+            <div id="day4"></div>
+            <div id="day5"></div>
         </div>
-
     </div>
 
     <!--Bootstrap JS-->
