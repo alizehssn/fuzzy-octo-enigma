@@ -69,6 +69,7 @@ function buildForecast(targetCity) {
             }
             //Five Day Forecast Loop to render the future forecast
             for (var i = 1; i < 6; i++) {
+                $("#day" + i).empty();
                 var icon = generatedResponseApi.daily[i].weather[0].icon;
                 console.log(icon)
                 let fiveDayIcon = "http://openweathermap.org/img/wn/" + icon + ".png";
