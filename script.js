@@ -45,11 +45,16 @@ function buildForecast(targetCity) {
             $("#city").text(targetCity);
             console.log(targetCity);
             console.log(humanDateFormat);
-            //Setting the Current Forecast Elements in the HTML to the result queried from the API
-            $("#temperature").text(generatedResponseApi.current.temp);
-            $("#humidity").text(generatedResponseApi.current.humidity);
-            $("#windSpeed").text(generatedResponseApi.current.wind_speed);
-            $("#UV").text(generatedResponseApi.current.uvi);
+            //Creating Variables for each API element
+            var currentTemp = generatedResponseApi.current.temp;
+            var currentHumidity = generatedResponseApi.current.humidity;
+            var currentWindSpeed = generatedResponseApi.current.wind_speed;
+            var currentUV = generatedResponseApi.current.uvi
+                //Setting the Current Forecast Elements in the HTML to the result queried from the API
+            $("#temperature").text("Temperature: " + currentTemp + " F");
+            $("#humidity").text("Humidity: " + currentHumidity + " g.kg");
+            $("#windSpeed").text("Wind-Speed: " + currentWindSpeed + " m/s");
+            $("#UV").text("Current UV Index: " + currentUV);
             //UVI Color-Coding
             if (generatedResponseApi.current.uvi < 3) {
                 $("#UV").css("background-color", "green")
@@ -83,10 +88,10 @@ function buildForecast(targetCity) {
                     //Setting the HTML Elements to the results rendered from the for loop
                 var fiveDayForecast = $("#day" + i)
                 fiveDayForecast.append("<img sameSite=none src=" + fiveDayIcon + ">");
-                fiveDayForecast.append("<p>", humanDateFormatFiveDay);
-                fiveDayForecast.append("<p>", tempMax);
-                fiveDayForecast.append("<p>", tempMin)
-                fiveDayForecast.append("<p>", humidity);
+                fiveDayForecast.append("<p>", "Date: " + humanDateFormatFiveDay);
+                fiveDayForecast.append("<p>", "High Temperature: " + tempMax);
+                fiveDayForecast.append("<p>", "Low Temperature: " + tempMin)
+                fiveDayForecast.append("<p>", "Humidity: " + humidity);
             }
 
 
