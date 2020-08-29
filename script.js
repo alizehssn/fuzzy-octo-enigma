@@ -101,8 +101,9 @@ $(document).ready(function() {
     }
 
 
-    function renderSearchHistory(cityName) {
-        var cityListEl = $('<li class="list-group-item">').text(cityName);
+    function renderSearchHistory(searchHistoryCity) {
+        var cityListEl = $('<li class="list-group-item" data-value="' + searchHistoryCity + '">').text(searchHistoryCity);
+        console.log(searchHistoryCity)
         $("ul").prepend(cityListEl)
     }
 
@@ -134,4 +135,18 @@ $(document).ready(function() {
             localStorage.setItem("cityListItem", JSON.stringify(saveListArray))
         }
     })
+
+
+    //On - Click for SearchHistory
+
+    $(document).on("click", "li", function() {
+        var searchHistoryCity = $(this).attr("data-value")
+        console.log(searchHistoryCity);
+
+        buildForecast(searchHistoryCity);
+        //renderSearchHistory(searchHistoryCity);
+
+    })
+
+
 });
