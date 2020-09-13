@@ -72,7 +72,7 @@ $(document).ready(function() {
                     $("#day" + i).empty();
                     var icon = generatedResponseApi.daily[i].weather[0].icon;
                     console.log(icon)
-                    let fiveDayIcon = "http://openweathermap.org/img/wn/" + icon + ".png";
+                    let fiveDayIcon = "https://openweathermap.org/img/wn/" + icon + ".png";
                     let fiveDayUnix = generatedResponseApi.daily[i].dt;
                     console.log(fiveDayUnix)
                     const millisecondsFiveDay = fiveDayUnix * 1000;
