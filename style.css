@@ -4,8 +4,8 @@ body {
     background-size: cover;
 }
 
-.jumbotron {
-    border-bottom: 10px;
+header {
+    border-bottom: 5px;
     text-align: center;
     color: blueviolet;
     font-weight: bold;
